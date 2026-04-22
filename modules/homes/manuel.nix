@@ -13,7 +13,7 @@
   programs.fastfetch.enable = true;
   programs.git = {
     enable = true;
-    settings.manuel = {
+    settings.user = {
       name = "manuel";
       email = "manuel.bagot@protonmail.com";
     };
