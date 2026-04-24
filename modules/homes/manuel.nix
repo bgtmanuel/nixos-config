@@ -7,10 +7,12 @@
   
   imports = [
     ./apps/vscode/vscode.nix
-    ./apps/firefox/firefox.nix
+    ./apps/librewolf.nix
     ./apps/nix-helper.nix
   ];
+
   programs.fastfetch.enable = true;
+
   programs.git = {
     enable = true;
     settings.user = {

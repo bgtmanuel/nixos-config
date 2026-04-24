@@ -6,5 +6,6 @@
     "workbench.colorTheme": "Tokyo Night",
     "workbench.iconTheme": "vscode-icons",
     "workbench.productIconTheme": "fluent-icons",
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "explorer.confirmDelete": false
 }  

@@ -12,6 +12,7 @@
     nixosConfigurations.asus = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
+        
         ./modules/hosts/asus/asus.nix
         ./modules/hosts/asus/asus-hardware-configuration.nix
         ./modules/system/bootloader/limine.nix
