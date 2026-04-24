@@ -1,11 +1,12 @@
 {
-    "editor.autoIndentOnPaste": true,
-    "editor.cursorBlinking": "expand",
-    "editor.cursorSmoothCaretAnimation": "on",
-    "files.autoSave": "afterDelay",
-    "workbench.colorTheme": "Tokyo Night",
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.productIconTheme": "fluent-icons",
-    "window.zoomLevel": 1,
-    "explorer.confirmDelete": false
-}  
+  "editor.autoIndentOnPaste": true,
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "explorer.confirmDelete": false,
+  "files.autoSave": "afterDelay",
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.productIconTheme": "fluent-icons",
+  "python.languageServer": "Pylance"
+}
