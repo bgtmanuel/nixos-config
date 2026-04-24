@@ -9,15 +9,7 @@
     ./apps/vscode/vscode.nix
     ./apps/librewolf.nix
     ./apps/nix-helper.nix
+    ./apps/git.nix
   ];
 
-  programs.fastfetch.enable = true;
-
-  programs.git = {
-    enable = true;
-    settings.user = {
-      name = "manuel";
-      email = "manuel.bagot@protonmail.com";
-    };
-  };
 }
