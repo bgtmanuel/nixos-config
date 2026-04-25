@@ -63,6 +63,14 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
+  programs.nix-ld = {
+  enable = true;
+  libraries = with pkgs; [
+      stdenv.cc.cc.lib
+      zlib
+    ];
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 

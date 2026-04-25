@@ -8,5 +8,5 @@
   "workbench.colorTheme": "Tokyo Night",
   "workbench.iconTheme": "vscode-icons",
   "workbench.productIconTheme": "fluent-icons",
-  "python.languageServer": "Pylance"
+  "python.languageServer": "None"
 }

@@ -15,6 +15,7 @@
         jnoortheen.nix-ide
         christian-kohler.path-intellisense
         miguelsolorio.fluent-icons
+        charliermarsh.ruff
       ];
       userSettings = builtins.fromJSON (builtins.readFile ./vscode-settings.json);
     };
