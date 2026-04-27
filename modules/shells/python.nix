@@ -20,7 +20,7 @@ pkgs.mkShell {
   shellHook = ''
     start-jupyter-server() {
       printf "\e[1mDémarrage du serveur Jupyter... (Ctrl+C pour arrêter)\e[0m\n"
-      uv run --with jupyter jupyter server
+      uv run --with jupyter jupyter server --no-browser
     }
     clear
     printf "\e[1;32mEnvironnement Python chargé\e[0m\n"

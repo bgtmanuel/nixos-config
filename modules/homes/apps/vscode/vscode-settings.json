@@ -4,9 +4,11 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "explorer.confirmDelete": false,
   "files.autoSave": "afterDelay",
+  "python.languageServer": "None",
   "window.zoomLevel": 1,
   "workbench.colorTheme": "Tokyo Night",
   "workbench.iconTheme": "vscode-icons",
   "workbench.productIconTheme": "fluent-icons",
-  "python.languageServer": "None"
+  "ty.inlayHints.callArgumentNames": false,
+  "ty.inlayHints.variableTypes": false
 }
