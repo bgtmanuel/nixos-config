@@ -12,4 +12,8 @@
     ./apps/git.nix
   ];
 
+  home.packages = with pkgs; [
+    deezer-desktop
+  ];
+
 }

@@ -25,6 +25,7 @@
         ./modules/hosts/asus/asus.nix
         ./modules/hosts/asus/asus-hardware-configuration.nix
         ./modules/system/bootloader/limine.nix
+        ./modules/system/desktop-environnement/gnome.nix
         
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
