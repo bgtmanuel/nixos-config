@@ -10,10 +10,6 @@
     ./apps/librewolf.nix
     ./apps/nix-helper.nix
     ./apps/git.nix
+    ./apps/fish.nix
   ];
-
-  home.packages = with pkgs; [
-    deezer-desktop
-  ];
-
 }

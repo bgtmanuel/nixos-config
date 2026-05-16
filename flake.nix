@@ -26,6 +26,7 @@
         ./modules/hosts/asus/asus-hardware-configuration.nix
         ./modules/system/bootloader/limine.nix
         ./modules/system/desktop-environnement/gnome.nix
+        ./modules/system/shell/fish.nix
         
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
@@ -37,7 +38,7 @@
     };
 
     devShells.${system} = {
-      python = import ./modules/shells/python.nix { inherit pkgs; };
+      python = import ./modules/dev-shells/python.nix { inherit pkgs; };
     };
 
   };

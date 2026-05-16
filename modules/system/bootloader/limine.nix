@@ -18,7 +18,6 @@
       backdrop = "000000";
       interface = {
         resolution = "1920x1200";
-        helpHidden = true;
         branding = "ASUS-MANUEL";
       };
     };
