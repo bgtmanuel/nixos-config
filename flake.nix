@@ -27,6 +27,7 @@
         ./modules/system/bootloader/limine.nix
         ./modules/system/desktop-environnement/gnome.nix
         ./modules/system/shell/fish.nix
+        ./modules/system/services/printing.nix
         
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
