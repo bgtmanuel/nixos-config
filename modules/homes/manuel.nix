@@ -5,14 +5,15 @@
   home.stateVersion = "25.11";
   programs.home-manager.enable = true;
 
-  programs.texlive = {
-    enable = true;
-    extraPackages = tpkgs: { inherit (tpkgs) scheme-full; };
-  };
+  # programs.texlive = {
+  #   enable = true;
+  #   extraPackages = tpkgs: { inherit (tpkgs) scheme-full; };
+  # };
   
   imports = [
     ./apps/vscode/vscode.nix
-    ./apps/librewolf.nix
+    # ./apps/librewolf.nix
+    ./apps/firefox.nix
     ./apps/nix-helper.nix
     ./apps/git.nix
     ./apps/fish.nix

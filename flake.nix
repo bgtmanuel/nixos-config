@@ -28,6 +28,8 @@
         ./modules/system/desktop-environnement/gnome.nix
         ./modules/system/shell/fish.nix
         ./modules/system/services/printing.nix
+        ./modules/system/programs/llama.nix
+        ./modules/system/programs/tree.nix
         
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;

@@ -15,6 +15,7 @@
         christian-kohler.path-intellisense
         miguelsolorio.fluent-icons
         charliermarsh.ruff
+        # james-yu.latex-workshop
       ];
       userSettings = builtins.fromJSON (builtins.readFile ./vscode-settings.json);
     };

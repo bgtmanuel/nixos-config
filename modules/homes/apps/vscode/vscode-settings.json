@@ -2,14 +2,17 @@
   "editor.autoIndentOnPaste": true,
   "editor.cursorBlinking": "expand",
   "editor.cursorSmoothCaretAnimation": "on",
+  "editor.wordWrap": "on",
   "explorer.confirmDelete": false,
   "files.autoSave": "afterDelay",
   "python.languageServer": "None",
+  "terminal.integrated.initialHint": false,
   "ty.inlayHints.callArgumentNames": false,
   "ty.inlayHints.variableTypes": false,
   "window.zoomLevel": 1,
   "workbench.colorTheme": "Tokyo Night",
   "workbench.iconTheme": "vscode-icons",
   "workbench.productIconTheme": "fluent-icons",
-  "terminal.integrated.initialHint": false
+  "editor.minimap.enabled": false,
+  "extensions.autoUpdate": false
 }
