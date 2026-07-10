@@ -8,41 +8,22 @@
   };
 
   outputs = { self, nixpkgs, home-manager, ... }: 
-  
-    let 
+  let
+    customHost = { user, hostname, configPath }: nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in
-  
-    {
-
-    nixosConfigurations.asus = nixpkgs.lib.nixosSystem {
-
-      inherit system;
-
+      specialArgs = { inherit hostname user; };
       modules = [
-        
-        ./modules/hosts/asus/asus.nix
-        ./modules/hosts/asus/asus-hardware-configuration.nix
-        ./modules/system/bootloader/limine.nix
-        ./modules/system/desktop-environnement/gnome.nix
-        ./modules/system/shell/fish.nix
-        ./modules/system/services/printing.nix
-        ./modules/system/programs/llama.nix
-        ./modules/system/programs/tree.nix
-        
-        home-manager.nixosModules.home-manager {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.manuel = ./modules/homes/manuel.nix;
-          home-manager.backupFileExtension = "bak";
+        ./hosts/${configPath}/configuration.nix
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.extraSpecialArgs = { inherit hostname user; };
         }
       ];
     };
-
-    devShells.${system} = {
-      python = import ./modules/dev-shells/python.nix { inherit pkgs; };
+  in
+  {
+    nixosConfigurations = {
+      clover = customHost { user = "manuel"; hostname = "nixos-clover"; configPath = "clover"; };
     };
-
   };
 }
