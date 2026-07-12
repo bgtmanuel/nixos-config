@@ -1,20 +1,7 @@
-{ config, lib, pkgs, ... }:
-let
-  cfg = config.customOpts.home-manager.core;
-in
+{ config, pkgs, username, ... }:
 {
-  options.customOpts.home-manager.core = {
-    user = lib.mkOption {
-      type = lib.types.str;
-      default = "manuel";
-    };
-  };
-
-  config = lib.mkMerge [
-    {
-      home.username = cfg.user;
-      home.homeDirectory = "/home/${cfg.user}";
-      programs.home-manager.enable = true;
-    }
-  ];
+  # Configure l'utilisateur pour Home-Manager
+  home.username = username;
+  home.homeDirectory = "/home/${username}";
+  programs.home-manager.enable = false;
 }
