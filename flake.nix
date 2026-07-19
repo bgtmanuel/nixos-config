@@ -22,6 +22,7 @@
   {
     nixosConfigurations = {
       clover = mkHost "clover";
+      sam = mkHost "sam";
     };
   };
 }

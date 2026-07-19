@@ -21,15 +21,15 @@ in
       };
     })
 
-    (lib.mkIf (cfg.backend == "cpu") {
+    (lib.mkIf (cfg.enable && (cfg.backend == "cpu")) {
       environment.systemPackages = [ pkgs.llama-cpp ];
     })
 
-    (lib.mkIf (cfg.backend == "vulkan") {
+    (lib.mkIf (cfg.enable && (cfg.backend == "vulkan")) {
       environment.systemPackages = [ pkgs.llama-cpp-vulkan ];
     })
 
-    (lib.mkIf (cfg.backend == "rocm") {
+    (lib.mkIf (cfg.enable && (cfg.backend == "rocm")) {
       environment.systemPackages = [ pkgs.llama-cpp-rocm ];
     })
   ];
