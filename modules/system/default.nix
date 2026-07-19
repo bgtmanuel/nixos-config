@@ -6,6 +6,7 @@
     ./connectivity.nix
     ./core.nix
     ./de.nix
+    ./ia.nix
     ./locale.nix
     ./programs.nix
     ./shell.nix

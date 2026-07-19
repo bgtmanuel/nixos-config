@@ -1,0 +1,46 @@
+healthCheckTimeout: 120
+
+logLevel: info
+logTimeFormat: "rfc822z" # Voir https://pkg.go.dev/time#pkg-constants
+logToStdout: "both"
+
+startPort: 8081
+
+sendLoadingState: true
+
+includeAliasesInList: true
+
+globalTTL: 120
+
+unloadTimeout: 10
+
+macros:
+  "min_ctx": 4096
+  "default-llama-cmd": "llama-server -t ${env.JERRIX_THREADS} -ctk q8_0 -ctv q8_0 -fit on -fitt 1024 -fitc ${min_ctx}"
+  "default-server-args": "--no-ui --port ${PORT} --slots --metrics"
+  "enable-mtp": "--spec-type draft-mtp --spec-draft-n-max 4"
+
+models:
+  "gemma-e2b":
+    cmd: "${default-llama-cmd} ${default-server-args} ${enable-mtp} -hf unsloth/gemma-4-E2B-it-qat-GGUF:UD-Q4_K_XL"
+    name: "Gemma 4 E2B QAT"
+    description: "Modèle multimodal de Google très rapide"
+    checkEndpoint: /health
+    capabilities:
+      in:
+        - text
+        - image
+        - audio
+      out:
+       - text
+      tools: true
+      context: 128000
+  
+  "bonsai":
+    cmd: "${default-llama-cmd} ${default-server-args} -hf prism-ml/Ternary-Bonsai-27B-gguf:Q2_g64"
+    name: "Ternary Bonsai 27B"
+    description: "Modèle expérimental avec quant 2 bits"
+    checkEndpoint: /health
+    capabilities:
+      tools: true
+      context: 262000
